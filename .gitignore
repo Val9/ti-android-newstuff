@@ -1,0 +1,8 @@
+.DS_Store
+*.swp
+src
+lib
+bin
+res/drawable
+res/values
+AndroidManifest.xml
