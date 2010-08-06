@@ -12,6 +12,7 @@ var data = [
 	{title: 'Plain Picker', hasChild: true, test:'pickers_plain.js'},
 	{title: 'Date Picker', hasChild: true, test:'pickers_date.js'},
 	{title: 'Time Picker', hasChild: true, test:'pickers_time.js'},
+	{title: 'Time Spinner', hasChild: true, test:'pickers_time_spinner.js'},
 	{title: 'Date Picker Dialog', hasChild: true, test:'pickers_date_dialog.js'},
 	{title: 'Time Picker Dialog', hasChild: true, test:'pickers_time_dialog.js'}
 	
