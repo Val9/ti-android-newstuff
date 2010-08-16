@@ -4,6 +4,7 @@ var w = Ti.UI.currentWindow;
 
 var picker = Ti.UI.createPicker({
 	type: Ti.UI.PICKER_TYPE_TIME,
+	height: 160,
 	useSpinner: true
 });
 picker.addEventListener('change', function(e) {

@@ -4,9 +4,13 @@ var w = Ti.UI.currentWindow;
 
 var picker = Ti.UI.createPicker({
 	type: Ti.UI.PICKER_TYPE_DATE,
-	maxDate: new Date(2017, 11, 31),
-	minDate: new Date(2008, 0, 1),
-	useSpinner: true
+	maxDate: new Date(2017, 9, 25),
+	minDate: new Date(2008, 2, 7),
+	useSpinner: true,
+	height: 160,
+	dayBeforeMonth: true,
+	numericMonths: false,
+	top: 100
 });
 picker.addEventListener('change', function(e) {
 	showStatus(e.value.toString());
@@ -31,3 +35,12 @@ btnCheck.addEventListener('click', function() {
 	showStatus(picker.value.toString());
 });
 w.add(btnCheck);
+
+var btnGerman = Ti.UI.createButton({
+	top: 50, left: 5, width: 150, height: 40,
+	title: 'To Spanish'
+});
+btnGerman.addEventListener('click', function() {
+	picker.locale = 'es';
+});
+w.add(btnGerman);
