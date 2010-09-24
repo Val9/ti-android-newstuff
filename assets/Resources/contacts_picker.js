@@ -15,7 +15,7 @@ function showAndGet() {
 	Ti.Contacts.showContacts({
 		selectedPerson: function(person) {
 			try {
-				showStatus(personToString(person));
+				showStatus(personToString(person.person));
 			} catch(e) {alert(e);}
 		},
 		cancel: function() {
@@ -25,7 +25,7 @@ function showAndGet() {
 }
 
 var data = [
-        	{title: 'Show Picker & Get Result', hasChild: true, test: 'showAndGet'}
+        	{title: 'Show Picker & Get Results', hasChild: true, test: 'showAndGet'}
         ];
 
 var tv = Ti.UI.createTableView({

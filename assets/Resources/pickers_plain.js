@@ -18,7 +18,8 @@ var picker = Ti.UI.createPicker({
 });
 
 picker.addEventListener('change', function(e) {
-	showStatus(e.row.title);
+	//showStatus(e.row.title);
+	showStatus(e.selectedValue);
 });
 
 w.add(picker);

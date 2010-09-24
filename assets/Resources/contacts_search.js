@@ -11,9 +11,12 @@ var l = Ti.UI.createLabel({
 });
 w.add(l);
 
+var testname = "Adelheid Oistric";
+var testid = 6;
+
 var data = [
-        	{title: 'People named "Ricky Garibaldi"', hasChild: true, test: 'ricky'},
-        	{title: 'Person with id "2"', hasChild: true, test: 'byId'},
+        	{title: 'People named "' + testname + '"', hasChild: true, test: 'name'},
+        	{title: 'Person with id "' + testid + '"', hasChild: true, test: 'byId'},
         	{title: 'All People', hasChild: true, test: 'all'}
         ];
 
@@ -28,11 +31,11 @@ var tv = Ti.UI.createTableView({
 tv.addEventListener('click', function(e){
 	var test = e.rowData.test;
 	var result;
-	if (test === 'ricky') {
-		result = Ti.Contacts.getPeopleWithName("Ricky Garibaldi");
+	if (test === 'name') {
+		result = Ti.Contacts.getPeopleWithName(testname);
 		showStatus(personCollectionToString(result));
 	} else if (test === 'byId') {
-		result = Ti.Contacts.getPersonByID(2);
+		result = Ti.Contacts.getPersonByID(testid);
 		showStatus(personToString(result));
 	} else if (test === 'all') {
 		result = Ti.Contacts.getAllPeople();

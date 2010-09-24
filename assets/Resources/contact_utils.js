@@ -4,12 +4,14 @@ function personToString(person)
 	var text = 'ID: ' + person.id + '; Full name: ' + person.fullName;
 	var email = person.email;
 	var displayAddress;
-	if ("other" in email) {
-		displayAddress = email.other[0] + " (other)";
-	} else if ("work" in email) {
-		displayAddress = email.work[0] + " (work)";
-	} else if ("home" in email) {
-		displayAddress = email.home[0] + " (home)";
+	if (email) {
+		if ("other" in email) {
+			displayAddress = email.other[0] + " (other)";
+		} else if ("work" in email) {
+			displayAddress = email.work[0] + " (work)";
+		} else if ("home" in email) {
+			displayAddress = email.home[0] + " (home)";
+		}
 	}
 	
 	if (displayAddress) {
